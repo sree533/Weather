@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WeatherProject</string>
+    <string name="search_city">Enter City or City,State</string>
 </resources>
