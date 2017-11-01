@@ -21,16 +21,4 @@ public class DateUtil {
         DateFormat convertFormat = new SimpleDateFormat("EEEE, MMM dd", Locale.getDefault());
         return convertFormat.format(date);
     }
-
-    /**
-     * From epoch to date format "Today"
-     *
-     * @param epoch epoch
-     * @return date
-     */
-    public static String convertEpochToDay(long epoch) {
-        Date date = new Date(epoch * 1000);
-        DateFormat convertFormat = new SimpleDateFormat("EEEE", Locale.getDefault());
-        return convertFormat.format(date);
-    }
 }

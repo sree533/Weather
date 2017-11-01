@@ -3,12 +3,18 @@ package com.app.weatherproject.restapi.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Main implements Parcelable {
 
     private double temp;
     private double pressure;
     private double humidity;
+
+    @SerializedName("temp_min")
     private double tempMin;
+
+    @SerializedName("temp_max")
     private double tempMax;
 
     protected Main(Parcel in) {

@@ -12,10 +12,12 @@ public class CurrentWeatherResponse implements Parcelable {
     private long dt;
     private int id;
     private Wind wind;
+    private String name;
 
     protected CurrentWeatherResponse(Parcel in) {
         dt = in.readLong();
         id = in.readInt();
+        name = in.readString();
     }
 
     public static final Creator<CurrentWeatherResponse> CREATOR = new Creator<CurrentWeatherResponse>() {
@@ -70,6 +72,14 @@ public class CurrentWeatherResponse implements Parcelable {
         this.wind = wind;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -79,5 +89,6 @@ public class CurrentWeatherResponse implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeLong(dt);
         parcel.writeInt(id);
+        parcel.writeString(name);
     }
 }
